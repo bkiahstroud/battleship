@@ -1,0 +1,20 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+h1 {
+  color: red;
+}
+#battleTable {
+  border: 2px solid black;
+  text-align: center;
+  width: 600px;
+  height: 600px;
+}
+tr {
+  width: 0px;
+  height: 0px;
+}
+td {
+  border: 2px solid black;
+}
