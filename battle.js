@@ -5,9 +5,15 @@ for (i = 0; i < 10; i++) {
   for (j = 0; j <10; j++) {
   }
 }
+var shipPositions = [];
 for (k = 0; k < 5; k++) {
-  board[Math.floor(Math.random() * 10)][Math.floor(Math.random() * 10)] = ship;
+  // board[Math.floor(Math.random() * 10)][Math.floor(Math.random() * 10)] = ship;
+  var rowI = [Math.floor(Math.random() * 10)];
+  var columnI = [Math.floor(Math.random() * 10)];
+  board[rowI][columnI] = ship
+  shipPositions.push([rowI, columnI])
 }
+
 $(document).ready(function(){
   for (var i_tr = 0; i_tr < 10; i_tr++) {
     $("#battleTable").append("<tr id=tr_" +i_tr+">"); //create 10 trs with unique ids
@@ -36,4 +42,20 @@ $(document).ready(function(){
       alert("Sorry you lose!");
     };
   });
+  $("button").on("click", function(){
+    for (var l = 0; l < 5; l++) {
+      ($("<td class="+parseInt((shipPositions[l][0]).toString())+" id="+parseInt((shipPositions[l][1]).toString())+">").addClass("hit"));
+    };
+  });
 });
+// make var shipPositions which saves the coordinates of the ships into an array. then convert those numbers to td positions to give them a class of "hit"
+
+// var coord = [[x],[y]];
+  // var shipPositions = [[coord][coord][coord][coord][coord]];
+  // for (var h = 0; h < 5; h++) {
+  //   if (board[coord] == 1) {
+  //   shipPositions = [h, coord];
+//    x = td;
+//    y = tr;
+  //   };
+  // };
