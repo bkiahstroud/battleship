@@ -31,13 +31,21 @@ $(document).ready(function(){
       //created variables for each of the ship location coordinates, as well as the coordinated of the spaces directly above, below, to the right, and left of the ships
       var isShip = "#" + rowI + columnI;
       var aboveShip = "#" + (rowI - 1) + columnI;
+      var topLeftShip = "#" + (rowI - 1) + (columnI - 1);
+      var topRightShip = "#" + (rowI - 1) + (parseInt(columnI) + 1);
       var belowShip = "#" + (parseInt(rowI) + 1) + columnI;
       var leftShip = "#" + rowI + (columnI - 1);
       var rightShip = "#" + rowI + (parseInt(columnI) + 1);
+      var bottomLeftShip = "#" + (parseInt(rowI) + 1) + (columnI - 1);
+      var bottomRightShip = "#" + (parseInt(rowI) + 1) + (parseInt(columnI) + 1);
       $(aboveShip).removeAttr("id");//removes the "id" attribute from the td at the location
+      $(topLeftShip).removeAttr("id");
+      $(topRightShip).removeAttr("id");
       $(belowShip).removeAttr("id");
       $(leftShip).removeAttr("id");
       $(rightShip).removeAttr("id");
+      $(bottomLeftShip).removeAttr("id");
+      $(bottomRightShip).removeAttr("id");
       $(isShip).addClass("hasShip"); //adds the class of "hasShip" to the ship coordinates
       $(isShip).removeAttr("id"); //removes the "id" from the td at the ship location
     };

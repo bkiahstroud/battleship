@@ -6,18 +6,25 @@ body {
   background-color: darkgrey;
 }
 h1 {
+  font-family: 'Jura', sans-serif;
   color: lightgreen;
   font-size: 300%;
   margin: 12px;
+  text-shadow: 3px 3px forestgreen;
 }
 section {
-  color: forestgreen;
+  color: lightgreen;
   font-size: 175%;
-  text-align: center;
+  text-shadow: 3px 2px forestgreen;
+  margin-top: 5px;
+  margin-left: 10px;
 }
 #battleTable {
+  background-color: blue;
   border: 2px solid black;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   width: 600px;
   height: 600px;
 }
@@ -28,6 +35,7 @@ tr {
 td {
   border: 2px solid black;
   background-color: lightblue;
+  box-shadow: 1px 1px 1px black;
 }
 .miss {
   background-color: white;
