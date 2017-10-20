@@ -1,4 +1,3 @@
-
 const ship = 1; //create constant ship
 var board = new Array(10); //creates the empty 10 X 10 array that corresponds to the positions in the board
 for (i = 0; i < 10; i++) {
